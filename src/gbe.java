@@ -58,6 +58,17 @@ public class gbe extends Frame {
 		pb.add(bt1);
 		pb.add(bt2);
 		
+		//²Ëµ¥-----------------------
+				MenuBar mb =new MenuBar();
+				setMenuBar(mb);
+				Menu m1 = new Menu("File");
+				Menu m2 =new Menu("Edit");
+				Menu m3 = new Menu("help");
+				mb.add(m1);
+				mb.add(m2);
+				mb.setHelpMenu(m3);
+		//-----------------------------
+		
 		addWindowListener(new WindowAdapter(){
 			public void windowClosing(WindowEvent evt){
 				System.exit(0);
