@@ -43,14 +43,15 @@ public class gbe extends Frame {
 		gbc.fill=GridBagConstraints.ABOVE_BASELINE;
 		//开始向FRAME添加  X,Y,Height,Width
 		adc(l1,0,0,1,1);
-		adc(tf1,0,2,1,4);
-		adc(l2,1,0,1,1);
-		adc(tf2,1,2,1,4);
-		adc(l3,2,0,1,1);
-		adc(tf3,3,2,1,4);
-		adc(l4,4,0,1,1);
-		adc(p,4,2,1,1);
-		adc(pb,5,2,1,5);
+		adc(l2,2,0,1,1);
+		adc(l3,4,0,1,1);
+		adc(l4,6,0,1,1);
+		adc(tf1,0,2,0,1);
+		adc(tf2,2,2,0,1);
+		adc(tf3,4,2,0,1);
+		
+		adc(p,6,2,1,5);
+		adc(pb,8,2,1,5);
 		p.add(cb1);
 		p.add(cb2);
 		p.add(cb3);
@@ -61,16 +62,16 @@ public class gbe extends Frame {
 		//菜单-----------------------
 				MenuBar mb =new MenuBar();
 				setMenuBar(mb);
-				MenuItem m1 = new MenuItem("File");
-				MenuItem m2 =new MenuItem("Edit");
-				MenuItem m3 = new MenuItem("help");
+				Menu m1 = new Menu("File");
+				Menu m2 =new Menu("Edit");
+				Menu m3 = new Menu("help");
 				mb.add(m1);
 				mb.add(m2);
 				mb.setHelpMenu(m3);
 				
-				Menu mi1 = new Menu("Save");
-				Menu mi2 = new Menu("Load");
-				Menu mi3 = new Menu("Quit");
+				MenuItem mi1 = new MenuItem("Save");
+				MenuItem mi2 = new MenuItem("Load");
+				MenuItem mi3 = new MenuItem("Quit");
 				m1.add(mi1);
 				m1.add(mi2);
 				m1.addSeparator();
