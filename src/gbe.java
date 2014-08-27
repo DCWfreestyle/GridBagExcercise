@@ -61,16 +61,25 @@ public class gbe extends Frame {
 		//²Ëµ¥-----------------------
 				MenuBar mb =new MenuBar();
 				setMenuBar(mb);
-				Menu m1 = new Menu("File");
-				Menu m2 =new Menu("Edit");
-				Menu m3 = new Menu("help");
+				MenuItem m1 = new MenuItem("File");
+				MenuItem m2 =new MenuItem("Edit");
+				MenuItem m3 = new MenuItem("help");
 				mb.add(m1);
 				mb.add(m2);
 				mb.setHelpMenu(m3);
+				
+				Menu mi1 = new Menu("Save");
+				Menu mi2 = new Menu("Load");
+				Menu mi3 = new Menu("Quit");
+				m1.add(mi1);
+				m1.add(mi2);
+				m1.addSeparator();
+				m1.add(mi3);
 		//-----------------------------
 		
 		addWindowListener(new WindowAdapter(){
 			public void windowClosing(WindowEvent evt){
+				dispose();
 				System.exit(0);
 			}
 		});
